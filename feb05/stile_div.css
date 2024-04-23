@@ -1,0 +1,45 @@
+@charset "utf-8";
+#menu{
+  background-color: rgb(22, 7, 112);  /*rendo visibile il div dandogli unon sfondo */
+  width: 100%; /*a tutta larghezza anche se i div vanno da sè al 100%, è bene confermalo in CSS per poterlo leggere e riprenderlo in futuro*/
+  height: 50px;
+  position: fixed; /* blocco il dvisibile in posizione fissa, non si può scorrere */
+  top: 0px; /* azzero il margine superiore impostato al broswer */
+  left: 0px;/* azzero il margine sinistro impostato al broswer */
+  color: white; /*coloro il testo del div */
+  font-family: Arial, Helvetica, sans-serif; /*imposto il font del testo del div */
+  font-size: 24px; /*imposto la dimensione del testo del div */
+padding-top: 10px;/*il div diventa alto 60px*/
+padding-left: 10px; /* stacco il testo dal bordo sinistro*/
+z-index: 10;/* poero il div in primo piano */
+}
+.foto{
+position: relative;
+float: left; /* affianco i div*/
+height: 900px;
+width: 900px;
+margin: 10px; /*distanza tra i div*/
+border: 2px solid rgb(22, 7, 112); /*coloro i bordi dei div per vederli più chiaramente*/
+border-radius: 30%;
+
+}
+.foto:hover {
+    background-color: rgb(22, 7, 112);
+}
+.prodotto {
+ position: absolute; /* dato che le immagini sono dentro i div foto che hanno position relative per le immagini devo usare position absolute perchè il contenitore non è static */  
+
+
+ /* istruzioni per lo stiramento dell'immagine*/
+ top: 0px; 
+ left: 0px;
+ right: 0px;
+ bottom: 0px;
+ margin: auto; /* centro l'immagine */
+ /*istruzioni  di adattamento*/
+ min-width: auto; /* larghezza minima automatica */
+ max-width: 100%; /* larghezza massima del contenitore */
+ max-height: 100%; /* altezza massimo del contenitore */
+ width: auto;
+ height: auto;
+}

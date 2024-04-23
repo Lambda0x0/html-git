@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 1</title>
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="miocss.css" /> <!-- css nostro sempre alla fine! -->
+</head>
+<body>
+    <div class="container">
+        <!-- creo prima una struttura senza Bootstrap, con classi mie -->
+        <div class="testo">
+            Primo div
+        </div>
+        <div class="testo">
+            Secondo div
+        </div>
+        <div class="testo">
+            Terzo div
+        </div>
+        <div style="clear: both;"></div> <!-- inserimento di CSS nel tag interessato -->
+        <!-- apro la griglia di Bootstrap -->
+        <div class="row">
+            <div class="col-4"> <!-- div largo 4/12 della row -->
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem earum at distinctio officia facere neque atque dolore. Commodi, sit aliquid. Consequuntur dolor iusto facilis distinctio, molestias veritatis nihil maxime sed odio officia. Et minus ut quam, temporibus itaque iste nulla. Laudantium facilis laboriosam dolores modi adipisci dolorem quis necessitatibus cumque.
+            </div>
+            <div class="col-4"> <!-- altro div da 4/12, sono a 8/12 occupati -->
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. At harum nisi sed aut, modi omnis odit consectetur repellat laboriosam doloremque nulla tenetur tempora ducimus quia labore vel hic aperiam obcaecati veritatis velit fugiat porro dolor. Porro dolorum iusto facere, ipsam praesentium aliquam inventore assumenda saepe. Asperiores eligendi sunt repudiandae saepe.
+            </div>
+            <div class="col-4"> <!-- altro div da 4/12, completo la row con 12/12 -->
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque magnam illum maiores molestias facere perspiciatis dolorum rerum quo quas culpa blanditiis alias debitis pariatur laudantium esse possimus animi ipsum dolore nobis, impedit vero. Harum assumenda quaerat, quae expedita, facilis dolore illum qui laudantium perferendis atque optio reprehenderit repellendus ad unde.
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3" style="background-color: #220ab7; color: #ffffff;"> <!-- 3/12 -->
+                col-3 con padding predefinito di Bootstrap
+            </div>
+            <div class="col-3" style="background-color: #547013; color: #ffffff;"> <!-- 6/12 -->
+                col-3 con padding predefinito di Bootstrap
+            </div>
+            <div class="col-3" style="background-color: #111111; color: yellow";> <!-- 9/12 -->
+                col-3 con padding predefinito di Bootstrap
+            </div>
+            <div class="col-3" style="background-color: #ede0e1; color: black;"> <!-- 12/12 -->
+                col-3 con padding predefinito di Bootstrap
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-3" style="background-color: #220ab7; color: #ffffff;"> <!-- 3/12 -->
+                col-3 senza padding predefinito di Bootstrap
+            </div>
+            <div class="col-3" style="background-color: #547013; color: #ffffff;"> <!-- 6/12 -->
+                col-3 senza padding predefinito di Bootstrap
+            </div>
+            <div class="col-3" style="background-color: #111111; color: yellow";> <!-- 9/12 -->
+                col-3 senza padding predefinito di Bootstrap
+            </div>
+            <div class="col-3" style="background-color: #ede0e1; color: black;"> <!-- 12/12 -->
+                col-3 senza padding predefinito di Bootstrap
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5 col-xl-2 col-lg-4 col-md-8 col-sm-10" style="background-color: coral;">
+                Div responsive ai breakpoint di Bootstrap <!-- col-5 viene letto al di sotto del breakpoint minimo che è sm -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

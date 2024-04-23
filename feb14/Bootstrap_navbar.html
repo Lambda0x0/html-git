@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar di Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top container">
+        <!--
+            navbar: classe per i menù di navigazione
+            navbar-expand-lg: definisco il breakpoint ove voglio che il menù collassi in un button/dropdown
+            fixed-top: menù fissato in alto allo scorrimento della pagina
+        -->
+        <a class="navbar-brand" href="#"><img src="https://www.accademiadellevante.org/wp-content/uploads/2018/06/logo-adl-def.png" alt="Accademia del Levante" /></a>
+        <!-- navbar-brand individua il titolo o il logo del sito -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mia_nav">
+            <span class="navbar-toggler-icon"></span> <!-- pulsantino con le tre lineette in orizzontale -->
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="mia_nav">
+            <!--
+                collapse: si collega col data-bs-toggle del button
+                navbar-collapse: si collega al contesto della navbar
+                justify-content-end: posiziona il contenuto del div a destra
+            -->
+            <ul class="navbar-nav"> <!-- adatto un elenco HTML alla classe di Bootstrap opportuna per la navbar-->
+                <li class="navbar-item"><a class="nav-link" href="#">Chi siamo</a></li>
+                <li class="navbar-item"><a class="nav-link" href="#">Corsi</a></li>
+                <li class="navbar-item"><a class="nav-link" href="#">Certificazioni</a></li>
+                <li class="navbar-item"><a class="nav-link" href="#">Esami</a></li>
+                <li class="navbar-item"><a class="nav-link" href="#">Lavora con noi</a></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>

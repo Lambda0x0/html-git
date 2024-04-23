@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+/* si inizia a formattare ignorando che dopo bisogna prevedere le altre visualizzazioni */
+body {
+    font-family: Arial;
+    color: #031073;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 16px; /* sovrascrivo rigo 7 */
+}
+
+#container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#menu ul { /* formatto l'elenco del menu */
+    list-style: none;
+    padding: 2px;
+    text-align: center;
+}
+
+#menu ul li { /* formatto le voci del menu */
+    display: inline; /* elementi in orizzontale */
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+#sinistra {
+    width: 700px;
+    float: left;
+    background-color: #41b319;
+}
+
+#destra {
+    width: 260px;
+    float: right;
+    background-color: #641c94;
+}
+
+#logo {
+    display: block; /* mostro l'oggetto come blocco, cioè che occupa tutta la riga */
+    width: 100%;
+    height: auto;
+}
+
+#logo_icona {
+    display: none; /* rendo non visibile questo oggetto, come se non fosse nell'HTML */
+}
+
+#nascondi {
+    visibility: hidden;
+}
+
+/* tramite Ispeziona del browser, individuo la larghezza massima a cui il CSS fin qui scritto va bene; leggo il valore e aggiungo una decina di pixel per tenere conto della larghezza della barra di scorrimento */
+
+@media only screen and (max-width: 980px) { /* 980px è il mio primo breakpoint */
+
+    #container {
+        width: 100%; /* sovrascrivo rigo 16 */
+    }
+
+    #menu ul li {
+        padding-left: 2%; /* sovrascrivo rigo 29 */
+        padding-right: 2%; /* sovrascrivo rigo 30 */
+    }
+
+    #sinistra {
+        width: 70%; /* sovrascrivo rigo 34 */
+    }
+
+    #destra {
+        width: 30%; /* sovrascrivo rigo 40 */
+    }
+
+    #nascondi {
+        visibility: visible;
+    }
+}
+
+/* come prima, scopro la larghezza a cui il menù non entra più su un solo rigo, e fisso il secondo breakpoint che dichiaro nella seconda media query */
+
+@media only screen and (max-width: 680px) {
+
+    body {
+        font-size: 16px; /* sovrascrivo rigo 7: ingrandisco il font perché sono in una visualizzazione a schermo piuttosto piccolo */
+    }
+
+    #menu ul li {
+        display: block; /* ogni voce del menù occupa tutta la riga, e quindi imposto il menu in verticale */
+    }
+
+    #sinistra {
+        width: 100%; /* sovrascrivo rigo 69 */
+        background-color: #ff0000; /* sovrascrivo rigo 36 */
+        /* in una media query posso modificare formattazioni definite in media query diverse in precedenza */
+    }
+
+    #destra {
+        width: 100%; /* sovrascrivo rigo 73 */
+        background-color: #00ff00; /* sovrascrivo rigo 42 */
+    }
+
+    #logo {
+        display: none; /* sovrascrivo rigo 46, nascondo il primo logo */
+    }
+
+    #logo_icona { /* il secondo logo era stato semplicemente nascosto, devo formattarlo qui */
+        display: block; /* sovrascrivo rigo 52 */
+        width: 70%;
+        max-width: 300px; /* limito che il logo occupi troppo spazio sullo smartphone, in particolare se usato in orizzontale */
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

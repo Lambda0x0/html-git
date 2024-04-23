@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form date e orari</title>
+</head>
+<body>
+  <form action="mailto://" method="post" id="formdate" name="formdate">
+    <label for="date">Data</label><input type="date" name="data"><br/>
+    <!--usando il lame il for deve coincdiere con name del controllo accanto-->
+    <label for="mese">Mese</label> <input type="month" name="mese"><br/>
+    <label for="settimana">Settimana: </label> <input type="week" name="settimana" /> <br>
+    <label for="ora">Ora:</label> <input type="time" name="ora" /><br/>
+    <label for="dataora"> dataeora:</label> <input type="datetime-local" name="dataora" /><br/>
+    <input type="submit" value="Invia"/>
+  </form>  
+</body>
+</html>

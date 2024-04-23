@@ -1,0 +1,53 @@
+@charset "UTF-8"; /* dichiaro il set di carattero */
+h2#titolo {
+    font-family: 'Oswald', sans-serif; /*seleziono il font */
+    color: blue; /*seleziono il colore */
+    text-align: center; /*seleziono l'alliniamento */
+
+
+
+
+
+}
+p {
+    font-family: Tahoma; /*seleziono il font */
+    color: red; /*seleziono il colore */
+    font-size: 20px;
+}
+.dispari{
+    color:green; /* sovrascrivo il rigo 10, il resto va bene come paragrafo generico */
+
+}
+.pari{
+    color: chocolate; /* sovrascrivo il rigo 10 */
+}
+.titoli{
+    font-family: arial; /*sovrascrivo il rigo 11 */
+    font-style: italic; /*elemento in corsivo*/
+    font-weight: bold;/*elemento anche in grassetto*/
+}
+a{
+    color: black ; /*imposto il colore del link*/
+
+}
+#niente{
+    text-decoration: none; /*tolgo la sottolineatura al link  con id="miente" */
+}
+table{
+   border: 2px dashed blue; /*imposto il bordo tabella, spessore, tipo di linea, colore */
+   /* N.B il border di css vince su quello di html*/
+   margin-left: auto; /*questo comando e il successivo centrano la tabella orizzontalmente*/
+   margin-right: auto;  
+   border-radius: 15px;
+}
+td{
+    border-bottom: 4px dotted red; /*imposto il bordo inferiroe tabella, spessore, tipo di linea, colore */
+  border-right: 4px solid lightgreen; /*imposto il bordo destra tabella, spessore, tipo di linea, colore */
+  width: 33.33%;
+}
+#centro{
+    text-align: center; /*allineo il testo al centro*/
+    font-family: 'Oswald', sans-serif;
+    background-color: darkgoldenrod;
+    border-radius: 15px; /*imposto il raggio del cerchio*/
+}

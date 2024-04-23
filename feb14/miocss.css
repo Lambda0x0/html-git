@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.container { /* un minimo di formattazione al container di Bootstrap */
+    background-color: darksalmon;
+    border: 0px;
+}
+
+.card { /* personalizzo le card di Bootstrap secondo il layout desiderato */
+    height: 100%;
+    margin-bottom: 0px;
+}

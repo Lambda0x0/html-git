@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+body {
+    background-color: #eeeeee;    
+    font-family: Helvetica, verdana;
+     margin-top: 0px; /*porto il contemitore  a contatto cl bordo del broswer*/
+}
+#contenitore {
+ background-color: white; /*sovrascrivo rigo 4*/
+ width: 800px;
+ margin-left: auto;
+ margin-right: auto; /*centrando il contenitore centro tutto il layout*/
+ 
+
+}
+#testa{
+   background-color: #66ccff; /*sovrascrivo rigo 10*/
+   color: white;
+text-align: center; /*centramento del testo*/
+font-size: 40px;
+padding: 10px; /* regolo la distanza del testo dai loro bordi del div in questione*/                                                                                                             
+}              
+#contenuto{
+    padding: 10px;
+}
+#menu{ /*dovento essere affiancato da principale, imposto una larghezza opportuna al div e lo flotto a sinistra dove voglio che appaia*/ 
+   width: 180px; 
+   float: left;
+
+}
+#principale{
+    width: 600px; /* computo larghezze principale+ menu + 2 pedding=800px che è la larghezza del contenitore*/
+    float: left;
+
+}
+#piede{
+    width: 800px;
+    height: 70px;
+    clear: both; /*porto fuori questo div dalla sequenza dei float precedenti "è come mandare a capo il div"*/
+    background-color: #888888; /*sovrascrivo rigo 10*/
+    color: white; /*testo bianco per in tre div all'interno */
+}
+
+#primo{
+   width: 200px;
+   float: left;
+   text-align: left;
+   padding: 10px;
+
+}
+#secondo{
+   width: 300px;
+   float: left;
+   text-align: center;
+   padding-top: 26px;
+   
+}

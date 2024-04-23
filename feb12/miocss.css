@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+body {
+    background-color: aqua;
+}
+
+.container { /* cambio qualche impostazione a una classe di Bootstrap */
+    background-color: crimson;
+}
+
+.testo {
+    float: left;
+    width: 31%;
+    border: 1px solid blue;
+    margin: 0px 1%; /* margin 0px verticali 1% orizzontali */
+    background-color: chartreuse;
+}
+
+.row { /* cambio qualche impostazione a una classe di Bootstrap */
+    border: 1px solid white;
+}

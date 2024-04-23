@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form di HTML5</title>
+    <style type="text/css">
+        #container{
+            width: 600px;
+            height: 600px; ;
+             margin-left: auto;
+             margin-right: auto;
+             background-color: rgb(255, 238, 0);
+        }
+        .etichette{
+            width: 150px;
+            float: left;
+            
+        } 
+        .campi{
+            width: 450px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <form method="get" action="mailto://...." id="formhtml5" name="html5">
+
+        <div id="container">
+            <div class="etichette">Colore</div>
+            <div class="campi">
+                <input type="color" name="colore" />
+            </div>
+            <div class="etichette"> Intervallo</div>
+            <div class="campi">
+                1<input type="range" name="recensione" min="1" max="10"> 10 <br>
+                0 <input type="range" name="intervallo" min="0" max="9" step="3">9
+                <!-- tramite lo step posso impossare il passo-->
+            </div>
+            <div class="etichette">E-mail</div>
+            <div class="campi">
+                <input type="email" name="email"tabindex="3"/>
+            </div>
+            <div class="etichette">Telefono</div>
+            <div class="campi">
+                <input type="tel" name="Telefono"/>
+            </div>
+            <div class="etichette">ricerca</div>
+            <div class="campi">
+                <input type="search" name="ricerca"/>
+
+            </div>
+            <div class="etichette">numero</div>
+            <div class="campi">
+                <input type="number" name="annodinascita" min="1924" max="2024" value="2000">
+            </div>
+            <div  class="etichette">Set di campi</div>
+            <div class="campi">
+                <fieldset> <!--set di campi di un form-->
+            <legend>Dati anagrafici</legend>
+            <p>
+                <input type="text" name="nome" placeholder="scrivi il tuo nome" tabindex="1"/> <br/>
+                <input type="text" name="cognome" placeholder="scrivi il tuo cognome" tabindex="2"/>
+
+            </p>
+                </fieldset>
+            </div>
+            <div class="etichette">&nbsp;</div>
+            <div class="campi">
+                <input type="submit" value="invia"/>
+                <input type="reset" value="cancella"/>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

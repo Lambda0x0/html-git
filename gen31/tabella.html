@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La mia videoteca</title>
+    <style>
+        table{
+            align=
+        }
+    </style>
+</head>
+
+<body>
+    <!-- tabella da 5 colonne: stabilisco prima quante colonne mi servono per poter ripartire la larghezza della tabella in percentuali -->
+    <table width="900" bgcolor="#a0a0a0" border="2" cellpadding="4" cellspacing="3" align="center">
+        <caption>
+            <h3> <strong> La mia videoteca </strong> </h3>
+        </caption>
+        <!-- i parametri rossi andrebbero formattati da CSS -->
+        <thead> <!-- zona di intestazione della table -->
+            <tr bgcolor="#808080">
+                <th width="25%">Titolo</th>
+                <th width="15%">Anno</th>
+                <th width="20%">Genere</th>
+                <th width="25%">Cast</th>
+                <th width="15%">Locandina</th>
+            </tr>
+        </thead>
+        <tbody> <!-- zona della tabella con i dati -->
+            <tr> <!-- non assegno un colore di sfondo, uso quello della table -->
+                <td valign="middle" align="left">La vita è bella</td>
+                <td valign="middle" align="center" rowspan="2">1997</td> <!--unisco celle due righe consecutive -->
+                <td valign="middle" align="left" rowspan="2">Drammatico</td> <!--unisco celle due righe consecutive -->
+                <td valign="middle" align="left"><strong>Regia:</strong> Roberto Benigni<br />
+                    <strong>Cast:</strong> Roberto Benigni, Nicoletta Braschi, Giorgio Cantarini, Giustino Durano
+                </td>
+                <td valign="middle" align="center"><img
+                        src="https://i.ebayimg.com/images/g/m4IAAOSwsAliNuo4/s-l1600.jpg" alt="La vita è bella"
+                        width="85%" height="auto" /></td>
+                <!-- dato che l'immagine è enorme, devo ridimensionarla (anche se andrebbe fatto da CSS...); non conoscendo lo spazio a disposizione nella cella, uso le percentuali, height="auto" mi conserva le proporzioni con la larghezza scalata -->
+            </tr>
+            <tr>
+                <td valign="middle" align="left">Tutti giù per terra</td>
+
+
+                <td valign="middle" align="left"><strong>Regia:</strong> Davide Ferrario<br />
+                    <strong>Cast:</strong> Benedetta Mazzini, Valerio Mastrandrea, Anita Caprioli, Caterina Caselli
+                </td>
+                <td valign="middle" align="center"><img src="https://pad.mymovies.it/filmclub/2011/04/013/locandina.jpg"
+                        alt="Tutti giù per terra" width="85%" height="auto" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <table width="400" align="center" border="2">
+        <tr>
+            <td width="40%">Prima cella </td>
+           <td width="40"> Prima cella     </td>
+
+        </tr>
+
+
+
+    </table>
+</body>
+
+</html>

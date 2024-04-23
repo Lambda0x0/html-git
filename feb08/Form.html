@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style type="text/css"> /* formatto in CSS direttamente nel file HTML */
+        table {
+            width: 600px;
+        }
+
+        tr {
+            height: 30px;
+            vertical-align: middle;
+        }
+
+        td {
+            border: 1px dotted orange;
+        }
+
+        .etichette { /* formatto le celle contenenti le etichette/label del form */
+            width: 150px;
+            font-weight: bold;
+        }
+
+        .campi {
+            width: 450px;
+        }
+
+        .casella {
+            font-family: Arial;
+            color: #dddddd;
+            background-color: black;
+            accent-color: black; /* sfondo per radio button e checkbox */
+        }
+
+        .casella:focus { /* quando sono nella casella, voglio togliere l'arrotondamento dei bordi */
+            outline: none;
+        }
+
+        textarea {
+            resize: none; /* impedisco che l'utente possa deformare la textarea */
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="mailto://" enctype="multipart/form-data" name="form1" id="form1">
+        <!--
+            il tag form contiene tutti i tag relativi ai controlli destinati all'interazione dell'utente
+            method: indico al form come gestire i dati immessi (get oppure post)
+            action: destinazione dei dati immessi (mail oppure pagina di programmazione)
+            enctype: da usare se il form prevede allegati
+            name oppure id: nome del form nell'ipotesi che nella stessa pagina ce ne sia più di uno
+        -->
+        <table cellspacing="0" cellpadding="0">
+            <tr>
+                <td class="etichette">Nome</td>
+                <td class="campi"><input type="text" name="nome" class="casella" /></td>
+            </tr>
+            <tr>
+                <td class="etichette">Cognome</td>
+                <td class="campi"><input type="text" name="cognome" class="casella" /></td>
+            </tr>
+            <tr>
+                <td class="etichette">Genere</td>
+                <td class="campi">
+                    <input type="radio" name="genere" class="casella" value="m" /> Uomo<br />
+                    <!-- value: valore assunto da genere se si seleziona Uomo -->
+                    <input type="radio" name="genere" class="casella" value="f" /> Donna<br />
+                    <!-- il name deve essere lo stesso affinché resti selezionata una sola voce -->
+                    <input type="radio" name="genere" class="casella" value="a" checked /> Altro
+                    <!-- checked preseleziona questa opzione -->
+                </td>
+            </tr>
+            <tr>
+                <td class="etichette">Interessi</td>
+                <td class="campi">
+                    <input type="checkbox" name="cinema" class="casella" value="ok" /> Cinema<br />
+                    <!--
+                        nella checkbox il name è il valore che voglio comunicare inviando il form, cui si associa il value ok se lo si seleziona: la query inviata sarà quindi cinema=ok; viceversa se non selezionata questa casella, il value non viene preso
+                    -->
+                    <input type="checkbox" name="musica" class="casella" value="ok" /> Musica<br />
+                    <input type="checkbox" name="lettura" class="casella" value="ok" /> Lettura<br />
+                    <input type="checkbox" name="sport" class="casella" value="ok" /> Sport<br />
+                    <input type="checkbox" name="informatica" class="casella" value="ok" /> Informatica
+                </td>
+            </tr>
+            <tr>
+                <td class="etichette">Stato civile</td>
+                <td class="campi">
+                    <input type="radio" name="stato" class="casella" value="con" checked /> Coniugato/a<br />
+                    <!-- altro name = altra famiglia di radio button-->
+                    <input type="radio" name="stato" class="casella" value="cn" /> Celibe/Nubile<br />
+                    <input type="radio" name="stato" class="casella" value="ved" /> Vedovo/a
+                </td>
+            </tr>
+            <tr>
+                <td class="etichette">Segno zodiacale</td>
+                <td class="campi">
+                    <select name="segno" class="casella">
+                        <option selected="selected" disabled>Di che segno sei?</option>
+                        <!--
+                            selected="selected" rende questo option predefinito al caricamento della pagina
+                            hidden nasconde questo option quando si apre il menù a tendina
+                        -->
+                        <option value="ariete">Ariete</option>
+                        <!-- Ariete (con la A maiuscola) è quello che vede l'utente, ariete (con la a minuscola) è il value che viene trasmesso dal form (backend) -->
+                        <option value="toro">Toro</option>
+                        <option value="gemelli">Gemelli</option>
+                        <option value="cancro">Cancro</option>
+                        <option value="leone">Leone</option>
+                        <option value="vergine">Vergine</option>
+                        <option value="bilancia">Bilancia</option>
+                        <option value="scorpione">Scorpione</option>
+                        <option value="sagittario">Sagittario</option>
+                        <option value="capricorno">Capricorno</option>
+                        <option value="acquario">Acquario</option>
+                        <option value="pesci">Pesci</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="etichette">Password</td>
+                <td class="campi"><input type="password" name="password" class="casella" placeholder="Scegli qui la tua password" /></td>
+                <!-- placeholder: testo provvisorio che scompare immettendo dati -->
+            </tr>
+            <tr>
+                <td class="etichette">Messaggio per lo staff</td>
+                <td class="campi">
+                    <textarea name="messaggio" cols="40" rows="5" class="casella" maxlength="500"></textarea>
+                    <!-- area in cui scrivere un messaggio di 40 caratteri per 5 righe, massimo 500 caratteri; se si supera questo spazio, compare una barra di scorrimento -->
+                </td>
+            </tr>
+            <tr>
+                <td class="etichette">Allega CV</td>
+                <td class="campi"><input type="file" name="cv" class="casella" /></td>
+            </tr>
+            <tr>
+                <td class="etichette">&nbsp;</td>
+                <td class="campi">
+                    <input type="submit" value="Invia (submit)" /> <!-- invia il form all'action -->
+                    <input type="button" value="Invia (button)" /> <!-- da programmare -->
+                    <input type="reset" value="Ripristina" /> <!-- cancella tutto -->
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
